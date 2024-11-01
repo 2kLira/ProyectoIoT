@@ -5,8 +5,7 @@
 #include "ESP8266_Utils.hpp"
 #include "ESP8266_Utils_MQTT.hpp"
 
-// Si ya tienes la declaración de espClient en MQTT.hpp, elimínala de aquí.
-// WiFiClient espClient;  // Eliminar esta línea si ya está en MQTT.hpp
+// WiFiClient espClient;  
 
 const int trigPin = D5;      // Pin de Trigger
 const int echoPin = D6;      // Pin de Echo
@@ -17,7 +16,6 @@ const int ledVerde = D3;     // Pin del LED verde
 extern WiFiClient espClient; // Utiliza extern para hacer referencia al cliente definido en MQTT.hpp
 PubSubClient client(espClient); // Inicializa el cliente MQTT
 
-// Asegúrate de definir estas variables en config.h o aquí mismo
 const char* mqttServer = "tu.servidor.mqtt"; // Reemplaza con tu servidor MQTT
 const int mqttPort = 1883; // Reemplaza con el puerto de tu servidor MQTT
 
